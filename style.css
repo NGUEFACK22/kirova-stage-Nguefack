@@ -1,36 +1,94 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
-    color:#333;
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --text: #1f2937;
+    --bg: #f3f7ff;
+    --white: #ffffff;
+    --border: #dbeafe;
 }
 
-header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:20px;
+* {
+    box-sizing: border-box;
 }
 
-section{
-    background:white;
-    margin:20px;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--bg), #e8f0ff);
+    color: var(--text);
+    line-height: 1.6;
 }
 
-h2{
-    color:#0d6efd;
+.container {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-ul{
-    padding-left:20px;
+header {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    color: var(--white);
+    padding: 48px 0 72px;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
 }
 
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
+header h1 {
+    margin: 0 0 10px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+header p {
+    margin: 0;
+    font-size: 1.05rem;
+    opacity: 0.95;
+}
+
+main {
+    margin-top: -30px;
+    padding-bottom: 40px;
+}
+
+section {
+    background: var(--white);
+    margin: 20px 0;
+    padding: 24px 28px;
+    border-radius: 16px;
+    border-left: 6px solid var(--primary);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+section h2 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+section p {
+    margin: 8px 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+footer {
+    background: #0f172a;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 32px 0 48px;
+    }
+
+    section {
+        padding: 20px;
+    }
 }
